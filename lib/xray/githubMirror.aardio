@@ -25,8 +25,7 @@ namespace xray.githubMirror{
 		for(mirrorIndex=1;#githubMirrors;1){
 			var selectedUrl = githubMirrors[mirrorIndex]['url']
 			// 域名必须以 / 结尾
-			var lastStr = ..string.slice(selectedUrl,-1,-1)
-			if(lastStr != "/"){
+			if(!..string.endWith(selectedUrl,"/",false)){
 				selectedUrl = ..string.concat(selectedUrl,"/")
 			}
 			var mirrorUrl = selectedUrl + url

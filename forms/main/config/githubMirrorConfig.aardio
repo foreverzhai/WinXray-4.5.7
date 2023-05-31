@@ -148,7 +148,7 @@ winform.mirrors.onnotify = function (id,code,ptr) {
 				testUrl(winform,winform.mirrors.getItemText(currentIdx,1),currentIdx)
 				acceleratorLock = false;
 			})
-			popmenu.add("删除加速节点",function(){
+			popmenu.add("删除节点",function(){
 				removeMirror(selectedItems);
 			})
 			popmenu.add("清空列表",function(){
@@ -209,8 +209,7 @@ winform.btnAdd.oncommand = function(id,event){
 		return;
 	}
 	// 域名必须以 / 结尾
-	var lastStr = ..string.slice(url,-1,-1)
-	if(lastStr != "/"){
+	if(!..string.endWith(url,"/",false)){
 		url = ..string.concat(url,"/")
 	}
 	
