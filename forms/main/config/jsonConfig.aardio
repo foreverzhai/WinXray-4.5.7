@@ -543,6 +543,11 @@ winform.editOutbounds.enablePopMenu(function(){
 						winform.editOutbounds.selText = '"ps":"",'
 					} 
 				};
+				{ "订阅地址:subscribeUrl";
+					function(id){
+						winform.editOutbounds.selText = '"subscribeUrl":"",'
+					} 
+				};
 			}}); 
 		}
 		
